@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Quang Minh - Full Stack Developer</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Nguyen Quang Minh</h1>
+        <p>Full Stack Developer</p>
+    </header>
+
+    <div class="container">
+
+        <section class="info">
+            <div>
+                <p><strong>Birthday:</strong> 11/07/2000</p>
+                <p><strong>Phone:</strong> 0329933496</p>
+                <p><strong>Email:</strong> <a href="mailto:minhnqdeveloper@gmail.com">minhnqdeveloper@gmail.com</a></p>
+            </div>
+            <div>
+                <p><strong>Github:</strong> <a href="https://github.com/minh6825" target="_blank">github.com/minh6825</a></p>
+                <p><strong>Address:</strong> Nam Tu Liem – Hà Nội</p>
+                <p><strong>Education:</strong> Post and Telecommunications Institute of Technology</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Javascript, TypeScript</li>
+                <li><strong>Technologies:</strong> Node.js, Express.js, TypeORM, ReactJs, NextJs, NestJs, Redux, HTML, CSS, Tailwind CSS, MUI</li>
+                <li><strong>Database:</strong> PostgreSQL, MongoDB</li>
+                <li><strong>Production Tools:</strong> Git, Vercel, Railway</li>
+                <li><strong>Systems:</strong> Linux, Docker</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+            <p><strong>Freelancer - Full Stack Developer (05/2024 - Present)</strong></p>
+            <ul>
+                <li>Peki (IELTS test, quiz creation, student management)</li>
+                <li>Technologies: NestJs, PostgreSQL, TypeORM, NextJs, Tailwind CSS</li>
+            </ul>
+            <p><strong>OKHUB AGENCY - Front-end Developer (07/2023 - 05/2024)</strong></p>
+            <ul>
+                <li>Viva Travel - Developed UI and animations for a travel website</li>
+                <li>Technologies: NextJs, Swiper</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-slider" id="projectSlider">
+                <div class="project">
+                    <h3>The Audit Race</h3>
+                    <p>Position: Front-end Developer</p>
+                    <p>Created a form submission page for a voting system in an accounting competition.</p>
+                    <p><strong>Demo:</strong> <a href="https://the-audit-race.vercel.app/" target="_blank">View</a></p>
+                </div>
+                <div class="project">
+                    <h3>OEI Website</h3>
+                    <p>Position: Front-end Developer</p>
+                    <p>Developed UI and animations for the OEI website.</p>
+                    <p><strong>Demo:</strong> <a href="https://oei.com.vn/" target="_blank">View</a></p>
+                </div>
+                <div class="project">
+                    <h3>ZingMP3 Clone</h3>
+                    <p>Position: Front-end Developer</p>
+                    <p>Clone of the ZingMP3 music streaming website.</p>
+                    <p><strong>Demo:</strong> <a href="https://minh1107.github.io/zingmp3v2/" target="_blank">View</a></p>
+                </div>
+                <div class="project">
+                    <h3>E-commerce Project</h3>
+                    <p>Position: Full Stack Developer</p>
+                    <p>Developed an e-commerce platform for product sales.</p>
+                    <p><strong>Demo:</strong> <a href="https://offshoreenergyinstallation.vercel.app/" target="_blank">View</a></p>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">Previous</button>
+                <button onclick="nextSlide()">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slider = document.getElementById('projectSlider');
+            const totalSlides = slider.children.length;
+            currentSlide = (index + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+
+</body>
+
+</html>
